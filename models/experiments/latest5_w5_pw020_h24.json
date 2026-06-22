@@ -1,0 +1,163 @@
+{
+  "sessions": [
+    "hp_blink_20260619_123314",
+    "hp_blink_20260619_123413",
+    "hp_blink_20260619_123524",
+    "hp_blink_20260619_123625",
+    "hp_blink_20260619_123734",
+    "hp_blink_20260619_123841",
+    "hp_blink_20260620_155312",
+    "hp_blink_20260620_174030",
+    "hp_blink_20260620_231529",
+    "hp_blink_20260621_004939",
+    "hp_blink_20260621_005008",
+    "hp_blink_20260621_013438",
+    "hp_blink_20260621_015455",
+    "hp_blink_20260621_022943"
+  ],
+  "samples": 18116,
+  "weighted_samples": 42224.0,
+  "positive_samples": 2101,
+  "window_size": 9,
+  "hidden_size": 24,
+  "threshold": 0.9,
+  "refractory_s": 0.75,
+  "local_peak_radius": 2,
+  "validation": {
+    "f1": 0.6123128119800334,
+    "precision": 0.5096952908587258,
+    "recall": 0.7666666666666667,
+    "rows": [
+      {
+        "session": "hp_blink_20260619_123314",
+        "markers": 15,
+        "events": 32,
+        "tp": 11,
+        "fp": 21,
+        "fn": 4
+      },
+      {
+        "session": "hp_blink_20260619_123413",
+        "markers": 12,
+        "events": 26,
+        "tp": 11,
+        "fp": 15,
+        "fn": 1
+      },
+      {
+        "session": "hp_blink_20260619_123524",
+        "markers": 20,
+        "events": 37,
+        "tp": 18,
+        "fp": 19,
+        "fn": 2
+      },
+      {
+        "session": "hp_blink_20260619_123625",
+        "markers": 19,
+        "events": 3,
+        "tp": 1,
+        "fp": 2,
+        "fn": 18
+      },
+      {
+        "session": "hp_blink_20260619_123734",
+        "markers": 21,
+        "events": 44,
+        "tp": 17,
+        "fp": 27,
+        "fn": 4
+      },
+      {
+        "session": "hp_blink_20260619_123841",
+        "markers": 17,
+        "events": 29,
+        "tp": 11,
+        "fp": 18,
+        "fn": 6
+      },
+      {
+        "session": "hp_blink_20260620_155312",
+        "markers": 45,
+        "events": 84,
+        "tp": 32,
+        "fp": 52,
+        "fn": 13
+      },
+      {
+        "session": "hp_blink_20260620_174030",
+        "markers": 6,
+        "events": 15,
+        "tp": 3,
+        "fp": 12,
+        "fn": 3
+      },
+      {
+        "session": "hp_blink_20260620_231529",
+        "markers": 4,
+        "events": 4,
+        "tp": 2,
+        "fp": 2,
+        "fn": 2
+      },
+      {
+        "session": "hp_blink_20260621_004939",
+        "markers": 4,
+        "events": 5,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0
+      },
+      {
+        "session": "hp_blink_20260621_005008",
+        "markers": 13,
+        "events": 12,
+        "tp": 12,
+        "fp": 0,
+        "fn": 1
+      },
+      {
+        "session": "hp_blink_20260621_013438",
+        "markers": 11,
+        "events": 12,
+        "tp": 10,
+        "fp": 2,
+        "fn": 1
+      },
+      {
+        "session": "hp_blink_20260621_015455",
+        "markers": 29,
+        "events": 30,
+        "tp": 28,
+        "fp": 2,
+        "fn": 1
+      },
+      {
+        "session": "hp_blink_20260621_022943",
+        "markers": 24,
+        "events": 28,
+        "tp": 24,
+        "fp": 4,
+        "fn": 0
+      }
+    ]
+  },
+  "feature_names": [
+    "i",
+    "q",
+    "amplitude",
+    "amplitude_delta",
+    "phase_delta",
+    "phase_pair_delta",
+    "phase_pair_vote_ratio",
+    "phase_pair_consistency",
+    "phase_pair_candidate_count",
+    "motion_energy",
+    "rms",
+    "peak_abs",
+    "range_spread_ratio",
+    "range_dominance_ratio",
+    "phase_sin",
+    "phase_cos"
+  ]
+}

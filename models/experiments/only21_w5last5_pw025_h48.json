@@ -1,0 +1,91 @@
+{
+  "sessions": [
+    "hp_blink_20260621_004939",
+    "hp_blink_20260621_005008",
+    "hp_blink_20260621_013438",
+    "hp_blink_20260621_015455",
+    "hp_blink_20260621_022943",
+    "hp_blink_20260621_024034"
+  ],
+  "samples": 7656,
+  "weighted_samples": 36368.0,
+  "positive_samples": 1299,
+  "window_size": 9,
+  "hidden_size": 48,
+  "threshold": 0.5,
+  "refractory_s": 0.75,
+  "local_peak_radius": 2,
+  "validation": {
+    "f1": 0.9769230769230769,
+    "precision": 1.0,
+    "recall": 0.9548872180451128,
+    "rows": [
+      {
+        "session": "hp_blink_20260621_004939",
+        "markers": 4,
+        "events": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "session": "hp_blink_20260621_005008",
+        "markers": 13,
+        "events": 12,
+        "tp": 12,
+        "fp": 0,
+        "fn": 1
+      },
+      {
+        "session": "hp_blink_20260621_013438",
+        "markers": 11,
+        "events": 10,
+        "tp": 10,
+        "fp": 0,
+        "fn": 1
+      },
+      {
+        "session": "hp_blink_20260621_015455",
+        "markers": 29,
+        "events": 28,
+        "tp": 28,
+        "fp": 0,
+        "fn": 1
+      },
+      {
+        "session": "hp_blink_20260621_022943",
+        "markers": 24,
+        "events": 24,
+        "tp": 24,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "session": "hp_blink_20260621_024034",
+        "markers": 52,
+        "events": 49,
+        "tp": 49,
+        "fp": 0,
+        "fn": 3
+      }
+    ]
+  },
+  "feature_names": [
+    "i",
+    "q",
+    "amplitude",
+    "amplitude_delta",
+    "phase_delta",
+    "phase_pair_delta",
+    "phase_pair_vote_ratio",
+    "phase_pair_consistency",
+    "phase_pair_candidate_count",
+    "motion_energy",
+    "rms",
+    "peak_abs",
+    "range_spread_ratio",
+    "range_dominance_ratio",
+    "phase_sin",
+    "phase_cos"
+  ]
+}

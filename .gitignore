@@ -1,0 +1,28 @@
+.DS_Store
+
+# Python caches
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environments
+.venv/
+venv/
+env/
+
+# Runtime recordings and generated session data
+sessions/
+*.npz
+*.npy
+
+# Generated benchmark/export artifacts
+benchmark_all_sessions.csv
+*.tmp
+*.log
+
+# Editor/local files
+.idea/
+.vscode/

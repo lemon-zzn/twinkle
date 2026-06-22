@@ -1,0 +1,32 @@
+{
+  "source": "refer\\FMCW\\live\\live_20260617_101435.npz",
+  "num_chirps": 200,
+  "range_bin": 15,
+  "range_bin_distance_m": 0.42875,
+  "breathing_present": true,
+  "phase_peak_to_peak_rad": 6.01496286296587,
+  "active_fraction": 0.125,
+  "motion_threshold": 0.2348434064755035,
+  "active_intervals": [
+    {
+      "start_s": 1.9500000000000002,
+      "end_s": 2.2,
+      "duration_s": 0.25
+    },
+    {
+      "start_s": 3.0500000000000003,
+      "end_s": 3.35,
+      "duration_s": 0.30000000000000004
+    },
+    {
+      "start_s": 5.75,
+      "end_s": 6.2,
+      "duration_s": 0.45
+    },
+    {
+      "start_s": 9.75,
+      "end_s": 10.0,
+      "duration_s": 0.25
+    }
+  ]
+}

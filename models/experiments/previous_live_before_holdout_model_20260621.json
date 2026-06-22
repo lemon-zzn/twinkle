@@ -1,0 +1,141 @@
+{
+  "sessions": [
+    "hp_blink_20260621_004939",
+    "hp_blink_20260621_005008",
+    "hp_blink_20260621_013438",
+    "hp_blink_20260621_015455",
+    "hp_blink_20260621_022943",
+    "hp_blink_20260621_024034",
+    "hp_blink_20260621_024728",
+    "hp_blink_20260621_025646",
+    "hp_blink_20260621_230224"
+  ],
+  "samples": 14643,
+  "weighted_samples": 87858.0,
+  "positive_samples": 2444,
+  "window_size": 9,
+  "hidden_size": 96,
+  "threshold": 0.95,
+  "refractory_s": 0.75,
+  "local_peak_radius": 2,
+  "validation": {
+    "f1": 0.9776876267748479,
+    "precision": 1.0,
+    "recall": 0.9563492063492064,
+    "rows": [
+      {
+        "session": "hp_blink_20260621_004939",
+        "markers": 4,
+        "events": 4,
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "session": "hp_blink_20260621_005008",
+        "markers": 13,
+        "events": 12,
+        "tp": 12,
+        "fp": 0,
+        "fn": 1
+      },
+      {
+        "session": "hp_blink_20260621_013438",
+        "markers": 11,
+        "events": 10,
+        "tp": 10,
+        "fp": 0,
+        "fn": 1
+      },
+      {
+        "session": "hp_blink_20260621_015455",
+        "markers": 29,
+        "events": 28,
+        "tp": 28,
+        "fp": 0,
+        "fn": 1
+      },
+      {
+        "session": "hp_blink_20260621_022943",
+        "markers": 24,
+        "events": 24,
+        "tp": 24,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "session": "hp_blink_20260621_024034",
+        "markers": 52,
+        "events": 50,
+        "tp": 50,
+        "fp": 0,
+        "fn": 2
+      },
+      {
+        "session": "hp_blink_20260621_024728",
+        "markers": 83,
+        "events": 79,
+        "tp": 79,
+        "fp": 0,
+        "fn": 4
+      },
+      {
+        "session": "hp_blink_20260621_025646",
+        "markers": 8,
+        "events": 8,
+        "tp": 8,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "session": "hp_blink_20260621_230224",
+        "markers": 28,
+        "events": 26,
+        "tp": 26,
+        "fp": 0,
+        "fn": 2
+      }
+    ]
+  },
+  "feature_names": [
+    "i",
+    "q",
+    "amplitude",
+    "amplitude_delta",
+    "phase_delta",
+    "phase_pair_delta",
+    "phase_pair_vote_ratio",
+    "phase_pair_consistency",
+    "phase_pair_candidate_count",
+    "motion_energy",
+    "rms",
+    "peak_abs",
+    "range_spread_ratio",
+    "range_dominance_ratio",
+    "phase_sin",
+    "phase_cos"
+  ],
+  "promoted_from": "models/experiments/recent9_21_nr40_pw025_w9_h96_s31.npz",
+  "selection_basis": {
+    "scope": "recent 9 hp_blink_20260621 sessions, audio replay, visual truth",
+    "recent9": {
+      "markers": 252,
+      "events": 237,
+      "tp": 237,
+      "fp": 0,
+      "fn": 15,
+      "recall": 0.9404761904761905,
+      "false_alarm_rate": 0.0
+    },
+    "hp_blink_20260621_230224": {
+      "markers": 28,
+      "events": 26,
+      "tp": 26,
+      "fp": 0,
+      "fn": 2,
+      "recall": 0.9285714285714286,
+      "false_alarm_rate": 0.0
+    }
+  },
+  "note": "Promoted after adding hp_blink_20260621_230224. Trained only on the recent 9 20260621 sessions with audio source, positive_window_s=0.25, negative_ratio=40, recent-session-count=9, recent-session-weight=6, hidden_size=96. Threshold 0.95 was selected because it preserved the best recent9 recall while keeping zero false positives."
+}

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://6mobile.github.io/labs/lab4.html#installation -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="description" content="6.1820 : Mobile and Sensor Computing Course">
+  <title>6.1820 - Lab 4</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="./6.1820 - Lab 4_files/atom-one-light.min.css">
+  <link rel="stylesheet" href="./6.1820 - Lab 4_files/stylesheet.css">
+  <script src="./6.1820 - Lab 4_files/tex-chtml-full.js.下载" type="text/javascript"></script><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="./6.1820 - Lab 4_files/highlight.min.js.下载"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+<style id="MJX-CHTML-styles">
+mjx-container[jax="CHTML"] {
+  line-height: 0;
+}
+
+mjx-container [space="1"] {
+  margin-left: .111em;
+}
+
+mjx-container [space="2"] {
+  margin-left: .167em;
+}
+
+mjx-container [space="3"] {
+  margin-left: .222em;
+}
+
+mjx-container [space="4"] {
+  margin-left: .278em;
+}
+
+mjx-container [space="5"] {
+  margin-left: .333em;
+}
+
+mjx-container [rspace="1"] {
+  margin-right: .111em;
+}
+
+mjx-container [rspace="2"] {
+  margin-right: .167em;
+}
+
+mjx-container [rspace="3"] {
+  margin-right: .222em;
+}
+
+mjx-container [rspace="4"] {
+  margin-right: .278em;
+}
+
+mjx-container [rspace="5"] {
+  margin-right: .333em;
+}
+
+mjx-container [size="s"] {
+  font-size: 70.7%;
+}
+
+mjx-container [size="ss"] {
+  font-size: 50%;
+}
+
+mjx-container [size="Tn"] {
+  font-size: 60%;
+}
+
+mjx-container [size="sm"] {
+  font-size: 85%;
+}
+
+mjx-container [size="lg"] {
+  font-size: 120%;
+}
+
+mjx-container [size="Lg"] {
+  font-size: 144%;
+}
+
+mjx-container [size="LG"] {
+  font-size: 173%;
+}
+
+mjx-container [size="hg"] {
+  font-size: 207%;
+}
+
+mjx-container [size="HG"] {
+  font-size: 249%;
+}
+
+mjx-container [width="full"] {
+  width: 100%;
+}
+
+mjx-box {
+  display: inline-block;
+}
+
+mjx-block {
+  display: block;
+}
+
+mjx-itable {
+  display: inline-table;
+}
+
+mjx-row {
+  display: table-row;
+}
+
+mjx-row > * {
+  display: table-cell;
+}
+
+mjx-mtext {
+  display: inline-block;
+}
+
+mjx-mstyle {
+  display: inline-block;
+}
+
+mjx-merror {
+  display: inline-block;
+  color: red;
+  background-color: yellow;
+}
+
+mjx-mphantom {
+  visibility: hidden;
+}
+
+_::-webkit-full-page-media, _:future, :root mjx-container {
+  will-change: opacity;
+}
+
+mjx-assistive-mml {
+  position: absolute !important;
+  top: 0px;
+  left: 0px;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 1px 0px 0px 0px !important;
+  border: 0px !important;
+  display: block !important;
+  width: auto !important;
+  overflow: hidden !important;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+mjx-assistive-mml[display="block"] {
+  width: 100% !important;
+}
+
+mjx-c::before {
+  display: block;
+  width: 0;
+}
+
+.MJX-TEX {
+  font-family: MJXZERO, MJXTEX;
+}
+
+.TEX-B {
+  font-family: MJXZERO, MJXTEX-B;
+}
+
+.TEX-I {
+  font-family: MJXZERO, MJXTEX-I;
+}
+
+.TEX-MI {
+  font-family: MJXZERO, MJXTEX-MI;
+}
+
+.TEX-BI {
+  font-family: MJXZERO, MJXTEX-BI;
+}
+
+.TEX-S1 {
+  font-family: MJXZERO, MJXTEX-S1;
+}
+
+.TEX-S2 {
+  font-family: MJXZERO, MJXTEX-S2;
+}
+
+.TEX-S3 {
+  font-family: MJXZERO, MJXTEX-S3;
+}
+
+.TEX-S4 {
+  font-family: MJXZERO, MJXTEX-S4;
+}
+
+.TEX-A {
+  font-family: MJXZERO, MJXTEX-A;
+}
+
+.TEX-C {
+  font-family: MJXZERO, MJXTEX-C;
+}
+
+.TEX-CB {
+  font-family: MJXZERO, MJXTEX-CB;
+}
+
+.TEX-FR {
+  font-family: MJXZERO, MJXTEX-FR;
+}
+
+.TEX-FRB {
+  font-family: MJXZERO, MJXTEX-FRB;
+}
+
+.TEX-SS {
+  font-family: MJXZERO, MJXTEX-SS;
+}
+
+.TEX-SSB {
+  font-family: MJXZERO, MJXTEX-SSB;
+}
+
+.TEX-SSI {
+  font-family: MJXZERO, MJXTEX-SSI;
+}
+
+.TEX-SC {
+  font-family: MJXZERO, MJXTEX-SC;
+}
+
+.TEX-T {
+  font-family: MJXZERO, MJXTEX-T;
+}
+
+.TEX-V {
+  font-family: MJXZERO, MJXTEX-V;
+}
+
+.TEX-VB {
+  font-family: MJXZERO, MJXTEX-VB;
+}
+
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
+  font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+}
+
+@font-face /* 0 */ {
+  font-family: MJXZERO;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+}
+
+@font-face /* 1 */ {
+  font-family: MJXTEX;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+}
+
+@font-face /* 2 */ {
+  font-family: MJXTEX-B;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+}
+
+@font-face /* 3 */ {
+  font-family: MJXTEX-I;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+}
+
+@font-face /* 4 */ {
+  font-family: MJXTEX-MI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+}
+
+@font-face /* 5 */ {
+  font-family: MJXTEX-BI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+}
+
+@font-face /* 6 */ {
+  font-family: MJXTEX-S1;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+}
+
+@font-face /* 7 */ {
+  font-family: MJXTEX-S2;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+}
+
+@font-face /* 8 */ {
+  font-family: MJXTEX-S3;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+}
+
+@font-face /* 9 */ {
+  font-family: MJXTEX-S4;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+}
+
+@font-face /* 10 */ {
+  font-family: MJXTEX-A;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+}
+
+@font-face /* 11 */ {
+  font-family: MJXTEX-C;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+}
+
+@font-face /* 12 */ {
+  font-family: MJXTEX-CB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+}
+
+@font-face /* 13 */ {
+  font-family: MJXTEX-FR;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+}
+
+@font-face /* 14 */ {
+  font-family: MJXTEX-FRB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+}
+
+@font-face /* 15 */ {
+  font-family: MJXTEX-SS;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+}
+
+@font-face /* 16 */ {
+  font-family: MJXTEX-SSB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+}
+
+@font-face /* 17 */ {
+  font-family: MJXTEX-SSI;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+}
+
+@font-face /* 18 */ {
+  font-family: MJXTEX-SC;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+}
+
+@font-face /* 19 */ {
+  font-family: MJXTEX-T;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+}
+
+@font-face /* 20 */ {
+  font-family: MJXTEX-V;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+}
+
+@font-face /* 21 */ {
+  font-family: MJXTEX-VB;
+  src: url("https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+}
+</style></head>
+<body>
+<header id="title-block-header">
+<h1 class="title">6.1820 - Lab 4</h1>
+</header>
+<div id="header_wrap" class="outer">
+<section id="main_content" class="inner">
+<h1 id="project_title"><a href="https://6mobile.github.io/index.html">6.1820</a></h1>
+<h2 id="project_tagline">Lab 4: Detecting Human Gestures via Sound Signals</h2>
+<p>Assigned: 2026-03-19<br>
+Due: 2026-04-07<br>
+</p>
+</section>
+</div>
+<div id="main_content_wrap" class="outer">
+<section id="main_content" class="inner">
+<ul>
+<li><a href="https://6mobile.github.io/labs/lab4.html#overview">Overview</a></li>
+<li><a href="https://6mobile.github.io/labs/lab4.html#installation">Installation</a></li>
+<li><a href="https://6mobile.github.io/labs/lab4.html#sec1">Section 1 — Recording and processing FMCW signals</a></li>
+<li><a href="https://6mobile.github.io/labs/lab4.html#sec2">Section 2 — Extracting gestures from FMCW</a></li>
+<li><a href="https://6mobile.github.io/labs/lab4.html#submission">Submission and Checkoff</a></li>
+</ul>
+<div style="color:#a00">
+
+</div>
+<h2 id="overview">Overview</h2>
+<p>The goal of this lab is to implement code in Jupyter Notebook to detect human gestures via sound signals. We have provided you with all of the code to show the processed outcome (eg spectrograms, plots etc.), but you will need to implement some parts of the FMCW background subtraction code to be able to visualize human gestures.</p>
+
+<p>This lab is based on a 6.1820 project in Spring 2021 by Cooper Jones, Willie Zhu and Jan Wojcik.</p>
+
+<p>Start by <a href="https://6mobile.github.io/labs/codes/lab4/6mobile_Lab4_GestureRecognitionViaFMCW.ipynb.zip">downloading the iPython code for this lab</a>.</p>
+
+<p> <strong>Known problem: </strong>Do not use Google Colab to run the .ipynb. The PortAudio library cannot be used in Colab </p>
+
+<h2 id="installation">Installation</h2>
+<p>Start by <a href="https://www.anaconda.com/">downloading the Anaconda software</a>. After installing, open the Anaconda Navigator and click on launch for Jupyter Notebook. It should open in Chrome. Create a new directory called “Lab_4_FMCW” and upload the “6.1820 Lab 4 – Gesture Recognition via FMCW.ipynb” notebook file in that directory. Open the file and you should be able to build and run the different code blocks in the file. Specifically, click on the box under “Initialization” then click “Run”. Do the same thing for the box under “Filter Functions”. Now that you have initialized the functions, you are ready to implement the code for the lab.
+</p>
+
+<p> For those unfamiliar with .ipynb, order in which you run the cells matter, so be aware when going back through different parts of this notebook (as in section 2)</p>
+
+
+<h2 id="sec1">Section 1 — Recording and processing FMCW Signals</h2>
+<p>The goal of this section is to successfully obtain spectrograms from the recorded FMCW signals. In the next section you will extract gestures using these spectrograms.</p>
+<p>The basic sequence is as follows:</p>
+
+<ol>
+<li>Simultaneously transmit and receive FMCW (i.e, chirp) signals from your laptop</li>
+<li> Multiply the received FMCW chirp with the transmitted FMCW chirp, for each chirp you should see a peak in the baseband</li>
+<li>Pass the output of the multiplication through a low pass filter</li>
+<li>Extract the peak and convert it to distance using the slope of the FMCW chirp and the speed of sound</li>
+<li>Record distance estimates from different chirps and plot them as a function of time</li>
+<li>Observe how the plot changes with different gestures.</li>
+</ol>
+
+<h3 id="sec1.1">Section 1.1: Transmit and receive a single tone</h3>
+
+<p>Before you can start transmitting and receiving FMCW chirp signals, you need to know how to transmit a single frequency, what it sounds like, what it looks like in the time and frequency domains, and what its spectrogram looks like.</p>
+<p>To do this you will need to implement the  “play_and_record” function. Given a  frequency, sampling rate, and duration as input, this function should play the corresponding sound (using the speaker) and record it (using the microphone); it should also return the recorded sound.</p>
+<p>You should write code to do the following:</p>
+<ol>
+    <li>Create the time domain signal x of frequency. It is a single tone (or frequency), i.e., a single sine or cosine wave.</li>
+    <li>Play that sound and record it. You can use "y = sd.playrec(x)" to play the signal x, which will be recorded by the microphone and stored in array y.</li>
+    </ol>
+<p>Once you have successfully implemented this function, execute the code that comes after the function definition. You should hear a loud 10kHz tone for 2 seconds. When you run the following code blocks, you should be able to see what the signal looks like in time and frequency and what the spectrogram of the signal looks like. </p>
+<p><strong>Known issue for Mac Laptops: </strong> When running the “sd.playrec()” command, Google Chrome might ask for permission to get access to the microphone, please give access when you get this message otherwise, this command will only play the sound but it will not record it. If you didn’t give access then you will need to go to microphone settings in Mac and there you can give microphone access to Chrome.</p>
+<p>Once everything is working fine, you should run subsequent blocks to see the received signal in the time domain, frequency domain, and the spectrogram.</p>
+
+<h3 id="sec1.1">Section 1.2: Transmit and receive a FMCW chirp</h3>
+<p>In this task, you will transmit and record a FMCW chirp signal. To do this you will need to implement the "play_and_record_chirp" function. Specifically you need to do the following:
+</p>
+<ol>
+    <li>Create a chirp signal using  the "chirp(t,f0=x,f1=x,t1=x,method='linear').astype(np.float32)" command where t is the time vector for your chirp, f0 and f1 are the starting and ending frequencies of your chirp, t1 is the chirp duration, and "method" tells you how the frequency should change as a function of time.</li>
+    <li>Create a variable which has multiple repetitions of this chirp so that the total duration of the signal matches “total_duration”.</li>
+    <li>Play that sound and record it. You can use "rx = sd.playrec(tx)" to play the signal tx, which will be recorded by the microphone and stored in array rx</li>
+    </ol>
+
+<p><strong>Note: </strong>If the microphone is not able to record a good signal, try increasing the amplitude of your transmitted signal (tx) by scaling the entire signal by a constant factor i.e. 500 or 100</p>
+<p>After you have successfully implemented this function, run the subsequent block. You should hear a periodic sweep from your speakers.</p>
+<p>Subsequent code blocks do the following:</p>
+<ol>
+    <li> Segment the transmitted and received FMCW signal into small chunks so that each chunk contains one FMCW chirp signal, this segmented data is stored as an array in “rx_data “and “tx_data”</li>
+    <li>Plots the FFT (frequency domain representation) of the first segment , i.e “rx_data_sample”</li>
+    <li>Mixes the first segment with the transmitted FMCW segment and plots the FFT of the mixed signal i.e. “multiplied_fft”  (you should see a peak here below 5000 Hz</li>
+    <li>Filters the mixed signal using a low pass filter, plots the FFT again and obtains the peak location (stored in “peak_location”)</li>
+    <li> Repeats the same steps for all segments (“all_multiplied” and “all_multiplied_ffts”) and shows how the spectrogram looks like for different consecutive segments.</li>
+    </ol>
+
+<h2 id="sec2">Section 2 — Extracting gestures from FMCW signals</h2>
+<p>Notice that the spectrograms look relatively similar. In this section, we will see how performing background subtraction allows us to track movements in the environment.</p>
+<h3 id="sec2.1">Section 2.1: Implement <code>background_subtract</code></h3>
+<p>In this task you will perform background subtraction from the received FMCW chirp signals. To do this you need to implement the background_subtract function that takes in a series of mixed chirp segment FFTs (i.e. all_multiplied_ffts) as input. Specifically you need to do the following:</p>
+<ol>
+    <li> Subtract consecutive mixed chirp signal segments in the frequency domain (i.e subtract consecutive segments in “all_multiplied_ffts”)</li>
+    <li>Return the segmented array after subtraction</li>
+</ol>
+
+<p>Subsequent code blocks do the following:
+</p><ol>
+    <li>  Get the peak locations for all of the segments and obtain the median peak location</li>
+    <li>Use the median peak location to zoom in on the subtracted FFTs (output of “background_subtract()” and store it in subtracted_filtered</li>
+    <li>Plots the spectrogram of the zoomed in subtracted FFT</li>
+    <li>Get the peak location in the subtracted FFT segments and plot them (stored in “argmaxes”)</li>
+    </ol>
+
+<h3 id="sec2.2">Section 2.2: Implement <code>idx_to_distance</code></h3>
+<p>In this task you will estimate the distance using the peak location. To do this you need to implement the “idx_to_distance” function which takes the peak location as input. Specifically you need to do the following:</p>
+<ol>
+    <li> Implement the following equation: <p>distance=(Δf*v)/(2*slope)</p>
+        <p>where "v" is the speed of sound in air, "slope" is the slope of your FMCW chirp (bandwidth / chirp duration) and " Δ𝑓 " corresponds to the peak location.</p>
+</li>
+    <li>Store the result in the “distance” variable and return it as an output of the function.</li>
+</ol>
+<p><strong> Hint: </strong>The index of the peak is not equal to  Δ𝑓  because it is not in Hz, how can you convert it to Hz?</p>
+<p>Once you have successfully implemented this function, and if you run the next code block. It should plot the distance variation as a function of time. </p>
+
+<h3 id="sec2.2">Section 2.3: Recording Gestures</h3>
+<p>In this task, you will record different hand gestures. To do this, run the code for Task 1.2 again but this time while the chirp sound is playing, do the following separately:</p>
+<ol>
+    <li> Move your hand up, bring it down, and then move it back up</li>
+    <li>Slowly move your hand up and down 4-5 times</li>
+</ol>
+<p>For each case your hand movement should be aligned with the direction of the sound.</p>
+<ul>
+    <li> Run all subsequent code blocks and take a screenshot of the plot titled “After background subtraction”, do this for both gestures separately (2 plots)</li>
+    <li>Run all subsequent code blocks until the very end and take a screenshot of the distance vs time plot, do this for both gestures separately (2 plots)</li>
+</ul>
+
+<h2 id="submission">Submission and Checkoff Instructions</h2>
+<p>Write up your answers to the following items in a single PDF file and name it <strong>lab4_kerberos.pdf</strong> or <strong>lab4_kerberos1+kerberos2.pdf</strong> (e.g.&nbsp;lab4_bnagda.pdf or lab4_bnagda+fadel.pdf). Upload the file to gradescope by <strong>Apr 7, 11:59 PM</strong>. If you work with a partner, you only have to submit once. You do not need to submit your code, but we may ask to look at your code during the checkoff.</p>
+<ol type="1">
+<li>Names and MIT emails (including your lab partner, if available).</li>
+<li>In the plot entitled “Frequency Domain - Recieved FMCW signal”, why does the output look the way it does?</li>
+<li>In the plot entitled “Frequency Domain - Downconverted FMCW signal”, why is there a single lower-frequency peak? What does this peak correspond to?</li>
+<li>Attach a screenshot of:
+    <ol type="1">
+        <li>The spectrogram </li>
+        <li>The distance vs time plot</li>
+    </ol>
+    <p> Do this for both movement patterns (i.e., 4 plots in total)</p>
+</li>
+<li>Estimated number of hours you spent on this lab per person.</li>
+<li>Any comments/suggestions for the lab? Any questions for the checkoff? (Optional)</li>
+</ol>
+<p>Bonus questions (Optional for extra credit) </p>
+<ol>
+<li>Why do we need to send a whole sweep (with a time interval of T) to estimate the gesture, why cant we just send two frequencies that are spaced by T seconds?</li>
+<li>Why do we need to subtract the first strongest peak from the remaining peaks to get the distance variation?</li>
+</ol>
+
+<p><strong>A checkoff will require successfully showing the two plots for the two different hand gestures, as well as explaining how each of the functions were implemented.
+</strong></p>
+
+</section>
+</div>
+
+
+</body></html>

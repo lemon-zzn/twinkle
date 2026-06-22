@@ -1,0 +1,109 @@
+{
+  "sessions": [
+    "hp_blink_20260621_004939",
+    "hp_blink_20260621_005008",
+    "hp_blink_20260621_013438",
+    "hp_blink_20260621_015455",
+    "hp_blink_20260621_022943",
+    "hp_blink_20260621_024034",
+    "hp_blink_20260621_024728",
+    "hp_blink_20260621_025646"
+  ],
+  "samples": 11112,
+  "weighted_samples": 56066.0,
+  "positive_samples": 2587,
+  "window_size": 9,
+  "hidden_size": 48,
+  "threshold": 0.985,
+  "refractory_s": 0.75,
+  "local_peak_radius": 2,
+  "validation": {
+    "f1": 0.7164179104477612,
+    "precision": 0.6153846153846154,
+    "recall": 0.8571428571428571,
+    "rows": [
+      {
+        "session": "hp_blink_20260621_004939",
+        "markers": 4,
+        "events": 19,
+        "tp": 4,
+        "fp": 15,
+        "fn": 0
+      },
+      {
+        "session": "hp_blink_20260621_005008",
+        "markers": 13,
+        "events": 38,
+        "tp": 11,
+        "fp": 27,
+        "fn": 2
+      },
+      {
+        "session": "hp_blink_20260621_013438",
+        "markers": 11,
+        "events": 19,
+        "tp": 9,
+        "fp": 10,
+        "fn": 2
+      },
+      {
+        "session": "hp_blink_20260621_015455",
+        "markers": 29,
+        "events": 46,
+        "tp": 21,
+        "fp": 25,
+        "fn": 8
+      },
+      {
+        "session": "hp_blink_20260621_022943",
+        "markers": 24,
+        "events": 37,
+        "tp": 17,
+        "fp": 20,
+        "fn": 7
+      },
+      {
+        "session": "hp_blink_20260621_024034",
+        "markers": 52,
+        "events": 48,
+        "tp": 48,
+        "fp": 0,
+        "fn": 4
+      },
+      {
+        "session": "hp_blink_20260621_024728",
+        "markers": 83,
+        "events": 76,
+        "tp": 76,
+        "fp": 0,
+        "fn": 7
+      },
+      {
+        "session": "hp_blink_20260621_025646",
+        "markers": 8,
+        "events": 29,
+        "tp": 6,
+        "fp": 23,
+        "fn": 2
+      }
+    ]
+  },
+  "feature_names": [
+    "i",
+    "q",
+    "amplitude",
+    "amplitude_delta",
+    "phase_delta",
+    "phase_pair_delta",
+    "phase_pair_vote_ratio",
+    "phase_pair_consistency",
+    "phase_pair_candidate_count",
+    "motion_energy",
+    "rms",
+    "peak_abs",
+    "range_spread_ratio",
+    "range_dominance_ratio",
+    "phase_sin",
+    "phase_cos"
+  ]
+}

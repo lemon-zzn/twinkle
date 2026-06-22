@@ -1,0 +1,144 @@
+{
+  "sessions": [
+    "hp_blink_20260621_022943",
+    "hp_blink_20260621_024034",
+    "hp_blink_20260621_024728",
+    "hp_blink_20260621_025646",
+    "hp_blink_20260621_230224",
+    "hp_blink_20260621_232748",
+    "hp_blink_20260621_232941",
+    "hp_blink_20260621_233028",
+    "hp_blink_20260621_233140"
+  ],
+  "samples": 7423,
+  "weighted_samples": 44538.0,
+  "positive_samples": 1999,
+  "validation_samples": 7986,
+  "validation_positive_samples": 500,
+  "positive_window_s": 0.25,
+  "near_negative_exclude_s": 0.0,
+  "negative_ratio": 80.0,
+  "positive_class_weight": 0.0,
+  "validation_fraction": 0.2,
+  "validation_negative_ratio": 16.0,
+  "window_size": 9,
+  "hidden_size": 128,
+  "threshold": 0.7,
+  "refractory_s": 0.75,
+  "local_peak_radius": 2,
+  "validation": {
+    "f1": 0.17908902691511389,
+    "precision": 0.12081005586592179,
+    "recall": 0.346,
+    "rows": [
+      {
+        "session": "hp_blink_20260621_022943",
+        "samples": 816,
+        "positives": 48,
+        "negatives": 768,
+        "predicted_positive": 189,
+        "tp": 18,
+        "fp": 171,
+        "fn": 30
+      },
+      {
+        "session": "hp_blink_20260621_024034",
+        "samples": 1220,
+        "positives": 102,
+        "negatives": 1118,
+        "predicted_positive": 36,
+        "tp": 36,
+        "fp": 0,
+        "fn": 66
+      },
+      {
+        "session": "hp_blink_20260621_024728",
+        "samples": 2720,
+        "positives": 160,
+        "negatives": 2560,
+        "predicted_positive": 731,
+        "tp": 64,
+        "fp": 667,
+        "fn": 96
+      },
+      {
+        "session": "hp_blink_20260621_025646",
+        "samples": 255,
+        "positives": 15,
+        "negatives": 240,
+        "predicted_positive": 36,
+        "tp": 2,
+        "fp": 34,
+        "fn": 13
+      },
+      {
+        "session": "hp_blink_20260621_230224",
+        "samples": 918,
+        "positives": 54,
+        "negatives": 864,
+        "predicted_positive": 144,
+        "tp": 15,
+        "fp": 129,
+        "fn": 39
+      },
+      {
+        "session": "hp_blink_20260621_232748",
+        "samples": 1071,
+        "positives": 63,
+        "negatives": 1008,
+        "predicted_positive": 190,
+        "tp": 23,
+        "fp": 167,
+        "fn": 40
+      },
+      {
+        "session": "hp_blink_20260621_232941",
+        "samples": 204,
+        "positives": 12,
+        "negatives": 192,
+        "predicted_positive": 39,
+        "tp": 4,
+        "fp": 35,
+        "fn": 8
+      },
+      {
+        "session": "hp_blink_20260621_233028",
+        "samples": 544,
+        "positives": 32,
+        "negatives": 512,
+        "predicted_positive": 46,
+        "tp": 7,
+        "fp": 39,
+        "fn": 25
+      },
+      {
+        "session": "hp_blink_20260621_233140",
+        "samples": 238,
+        "positives": 14,
+        "negatives": 224,
+        "predicted_positive": 21,
+        "tp": 4,
+        "fp": 17,
+        "fn": 10
+      }
+    ]
+  },
+  "feature_names": [
+    "i",
+    "q",
+    "amplitude",
+    "amplitude_delta",
+    "phase_delta",
+    "phase_pair_delta",
+    "phase_pair_vote_ratio",
+    "phase_pair_consistency",
+    "phase_pair_candidate_count",
+    "motion_energy",
+    "rms",
+    "peak_abs",
+    "range_spread_ratio",
+    "range_dominance_ratio",
+    "phase_sin",
+    "phase_cos"
+  ]
+}

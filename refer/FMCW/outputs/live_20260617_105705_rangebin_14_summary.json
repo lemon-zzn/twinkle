@@ -1,0 +1,17 @@
+{
+  "source": "E:\\android_projects\\eye_blink_detect\\hp_acoustic_wave\\refer\\FMCW\\live\\live_20260617_105705.npz",
+  "num_chirps": 200,
+  "range_bin": 14,
+  "range_bin_distance_m": 0.40016666666666667,
+  "breathing_present": true,
+  "phase_peak_to_peak_rad": 34.922622279370614,
+  "active_fraction": 0.02,
+  "motion_threshold": 1.7413818687627916,
+  "active_intervals": [
+    {
+      "start_s": 9.8,
+      "end_s": 10.0,
+      "duration_s": 0.2
+    }
+  ]
+}

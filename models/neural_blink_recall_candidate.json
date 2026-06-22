@@ -1,0 +1,153 @@
+{
+  "sessions": [
+    "hp_blink_20260619_123314",
+    "hp_blink_20260619_123413",
+    "hp_blink_20260619_123524",
+    "hp_blink_20260619_123625",
+    "hp_blink_20260619_123734",
+    "hp_blink_20260619_123841",
+    "hp_blink_20260620_155312",
+    "hp_blink_20260620_174030",
+    "hp_blink_20260620_231529",
+    "hp_blink_20260621_004939",
+    "hp_blink_20260621_005008",
+    "hp_blink_20260621_013438",
+    "hp_blink_20260621_015455"
+  ],
+  "samples": 16461,
+  "positive_samples": 2835,
+  "window_size": 9,
+  "hidden_size": 48,
+  "threshold": 0.95,
+  "refractory_s": 0.75,
+  "local_peak_radius": 2,
+  "validation": {
+    "f1": 0.8333333333333334,
+    "precision": 0.9166666666666666,
+    "recall": 0.7638888888888888,
+    "rows": [
+      {
+        "session": "hp_blink_20260619_123314",
+        "markers": 15,
+        "events": 13,
+        "tp": 11,
+        "fp": 2,
+        "fn": 4
+      },
+      {
+        "session": "hp_blink_20260619_123413",
+        "markers": 12,
+        "events": 12,
+        "tp": 12,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "session": "hp_blink_20260619_123524",
+        "markers": 20,
+        "events": 19,
+        "tp": 18,
+        "fp": 1,
+        "fn": 2
+      },
+      {
+        "session": "hp_blink_20260619_123625",
+        "markers": 19,
+        "events": 2,
+        "tp": 1,
+        "fp": 1,
+        "fn": 18
+      },
+      {
+        "session": "hp_blink_20260619_123734",
+        "markers": 21,
+        "events": 21,
+        "tp": 18,
+        "fp": 3,
+        "fn": 3
+      },
+      {
+        "session": "hp_blink_20260619_123841",
+        "markers": 17,
+        "events": 16,
+        "tp": 15,
+        "fp": 1,
+        "fn": 2
+      },
+      {
+        "session": "hp_blink_20260620_155312",
+        "markers": 45,
+        "events": 34,
+        "tp": 30,
+        "fp": 4,
+        "fn": 15
+      },
+      {
+        "session": "hp_blink_20260620_174030",
+        "markers": 6,
+        "events": 7,
+        "tp": 6,
+        "fp": 1,
+        "fn": 0
+      },
+      {
+        "session": "hp_blink_20260620_231529",
+        "markers": 4,
+        "events": 3,
+        "tp": 3,
+        "fp": 0,
+        "fn": 1
+      },
+      {
+        "session": "hp_blink_20260621_004939",
+        "markers": 4,
+        "events": 4,
+        "tp": 3,
+        "fp": 1,
+        "fn": 1
+      },
+      {
+        "session": "hp_blink_20260621_005008",
+        "markers": 13,
+        "events": 12,
+        "tp": 12,
+        "fp": 0,
+        "fn": 1
+      },
+      {
+        "session": "hp_blink_20260621_013438",
+        "markers": 11,
+        "events": 11,
+        "tp": 11,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "session": "hp_blink_20260621_015455",
+        "markers": 29,
+        "events": 26,
+        "tp": 25,
+        "fp": 1,
+        "fn": 4
+      }
+    ]
+  },
+  "feature_names": [
+    "i",
+    "q",
+    "amplitude",
+    "amplitude_delta",
+    "phase_delta",
+    "phase_pair_delta",
+    "phase_pair_vote_ratio",
+    "phase_pair_consistency",
+    "phase_pair_candidate_count",
+    "motion_energy",
+    "rms",
+    "peak_abs",
+    "range_spread_ratio",
+    "range_dominance_ratio",
+    "phase_sin",
+    "phase_cos"
+  ]
+}

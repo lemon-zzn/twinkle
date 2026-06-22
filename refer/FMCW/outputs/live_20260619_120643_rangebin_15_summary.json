@@ -1,0 +1,27 @@
+{
+  "source": "/Users/a0/codex-work/hp_acoustic_wave/refer/FMCW/live/live_20260619_120643.npz",
+  "num_chirps": 200,
+  "range_bin": 15,
+  "range_bin_distance_m": 0.42875,
+  "breathing_present": true,
+  "phase_peak_to_peak_rad": 23.58019631623314,
+  "active_fraction": 0.08,
+  "motion_threshold": 1.071950360034245,
+  "active_intervals": [
+    {
+      "start_s": 3.2,
+      "end_s": 3.45,
+      "duration_s": 0.25
+    },
+    {
+      "start_s": 7.65,
+      "end_s": 8.0,
+      "duration_s": 0.35000000000000003
+    },
+    {
+      "start_s": 9.8,
+      "end_s": 10.0,
+      "duration_s": 0.2
+    }
+  ]
+}

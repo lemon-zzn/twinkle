@@ -1,0 +1,143 @@
+{
+  "sessions": [
+    "hp_blink_20260621_022943",
+    "hp_blink_20260621_024034",
+    "hp_blink_20260621_024728",
+    "hp_blink_20260621_025646",
+    "hp_blink_20260621_230224",
+    "hp_blink_20260621_232748",
+    "hp_blink_20260621_232941",
+    "hp_blink_20260621_233028",
+    "hp_blink_20260621_233140"
+  ],
+  "samples": 5850,
+  "weighted_samples": 35100.0,
+  "positive_samples": 1999,
+  "validation_samples": 5858,
+  "validation_positive_samples": 500,
+  "positive_window_s": 0.25,
+  "near_negative_exclude_s": 0.6,
+  "negative_ratio": 40.0,
+  "validation_fraction": 0.2,
+  "validation_negative_ratio": 12.0,
+  "window_size": 9,
+  "hidden_size": 96,
+  "threshold": 0.7,
+  "refractory_s": 0.75,
+  "local_peak_radius": 2,
+  "validation": {
+    "f1": 0.268305171530978,
+    "precision": 0.18031658637302134,
+    "recall": 0.524,
+    "rows": [
+      {
+        "session": "hp_blink_20260621_022943",
+        "samples": 624,
+        "positives": 48,
+        "negatives": 576,
+        "predicted_positive": 165,
+        "tp": 22,
+        "fp": 143,
+        "fn": 26
+      },
+      {
+        "session": "hp_blink_20260621_024034",
+        "samples": 684,
+        "positives": 102,
+        "negatives": 582,
+        "predicted_positive": 61,
+        "tp": 61,
+        "fp": 0,
+        "fn": 41
+      },
+      {
+        "session": "hp_blink_20260621_024728",
+        "samples": 2080,
+        "positives": 160,
+        "negatives": 1920,
+        "predicted_positive": 754,
+        "tp": 80,
+        "fp": 674,
+        "fn": 80
+      },
+      {
+        "session": "hp_blink_20260621_025646",
+        "samples": 195,
+        "positives": 15,
+        "negatives": 180,
+        "predicted_positive": 36,
+        "tp": 6,
+        "fp": 30,
+        "fn": 9
+      },
+      {
+        "session": "hp_blink_20260621_230224",
+        "samples": 702,
+        "positives": 54,
+        "negatives": 648,
+        "predicted_positive": 151,
+        "tp": 31,
+        "fp": 120,
+        "fn": 23
+      },
+      {
+        "session": "hp_blink_20260621_232748",
+        "samples": 819,
+        "positives": 63,
+        "negatives": 756,
+        "predicted_positive": 190,
+        "tp": 37,
+        "fp": 153,
+        "fn": 26
+      },
+      {
+        "session": "hp_blink_20260621_232941",
+        "samples": 156,
+        "positives": 12,
+        "negatives": 144,
+        "predicted_positive": 37,
+        "tp": 7,
+        "fp": 30,
+        "fn": 5
+      },
+      {
+        "session": "hp_blink_20260621_233028",
+        "samples": 416,
+        "positives": 32,
+        "negatives": 384,
+        "predicted_positive": 42,
+        "tp": 11,
+        "fp": 31,
+        "fn": 21
+      },
+      {
+        "session": "hp_blink_20260621_233140",
+        "samples": 182,
+        "positives": 14,
+        "negatives": 168,
+        "predicted_positive": 17,
+        "tp": 7,
+        "fp": 10,
+        "fn": 7
+      }
+    ]
+  },
+  "feature_names": [
+    "i",
+    "q",
+    "amplitude",
+    "amplitude_delta",
+    "phase_delta",
+    "phase_pair_delta",
+    "phase_pair_vote_ratio",
+    "phase_pair_consistency",
+    "phase_pair_candidate_count",
+    "motion_energy",
+    "rms",
+    "peak_abs",
+    "range_spread_ratio",
+    "range_dominance_ratio",
+    "phase_sin",
+    "phase_cos"
+  ]
+}

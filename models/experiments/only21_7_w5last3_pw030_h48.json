@@ -1,0 +1,100 @@
+{
+  "sessions": [
+    "hp_blink_20260621_004939",
+    "hp_blink_20260621_005008",
+    "hp_blink_20260621_013438",
+    "hp_blink_20260621_015455",
+    "hp_blink_20260621_022943",
+    "hp_blink_20260621_024034",
+    "hp_blink_20260621_024728"
+  ],
+  "samples": 12004,
+  "weighted_samples": 42532.0,
+  "positive_samples": 2498,
+  "window_size": 9,
+  "hidden_size": 48,
+  "threshold": 0.98,
+  "refractory_s": 0.75,
+  "local_peak_radius": 2,
+  "validation": {
+    "f1": 0.9386792452830189,
+    "precision": 0.9567307692307693,
+    "recall": 0.9212962962962963,
+    "rows": [
+      {
+        "session": "hp_blink_20260621_004939",
+        "markers": 4,
+        "events": 5,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0
+      },
+      {
+        "session": "hp_blink_20260621_005008",
+        "markers": 13,
+        "events": 12,
+        "tp": 12,
+        "fp": 0,
+        "fn": 1
+      },
+      {
+        "session": "hp_blink_20260621_013438",
+        "markers": 11,
+        "events": 10,
+        "tp": 9,
+        "fp": 1,
+        "fn": 2
+      },
+      {
+        "session": "hp_blink_20260621_015455",
+        "markers": 29,
+        "events": 31,
+        "tp": 24,
+        "fp": 7,
+        "fn": 5
+      },
+      {
+        "session": "hp_blink_20260621_022943",
+        "markers": 24,
+        "events": 24,
+        "tp": 24,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "session": "hp_blink_20260621_024034",
+        "markers": 52,
+        "events": 48,
+        "tp": 48,
+        "fp": 0,
+        "fn": 4
+      },
+      {
+        "session": "hp_blink_20260621_024728",
+        "markers": 83,
+        "events": 78,
+        "tp": 78,
+        "fp": 0,
+        "fn": 5
+      }
+    ]
+  },
+  "feature_names": [
+    "i",
+    "q",
+    "amplitude",
+    "amplitude_delta",
+    "phase_delta",
+    "phase_pair_delta",
+    "phase_pair_vote_ratio",
+    "phase_pair_consistency",
+    "phase_pair_candidate_count",
+    "motion_energy",
+    "rms",
+    "peak_abs",
+    "range_spread_ratio",
+    "range_dominance_ratio",
+    "phase_sin",
+    "phase_cos"
+  ]
+}
